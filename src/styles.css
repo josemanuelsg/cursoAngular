@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+.fondoAzul
+{
+  background-color:lightblue !important;
+}
+
+.fondoVerde{
+  background-color: lightgreen !important;
+}
+
+.activado{
+  font-weight: bold;
+  background-color: yellow;
+}
