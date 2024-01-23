@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+nav{
+  padding: 20px;
+}
+a{
+  padding: 20px;
+}
+label{
+  padding: 20px;
+}
+
 
 .fondoAzul
 {
