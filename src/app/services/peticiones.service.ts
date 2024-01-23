@@ -6,16 +6,14 @@ import { map } from 'rxjs/operators';
 @Injectable()
 export class PeticionesService{
   public url: string;
-  constructor(
-    private _http:HttpClient
-  ){
+
+  constructor(private _http:HttpClient){
     this.url = "https://jsonplaceholder.typicode.com/posts";
   }
   getPrueba(){
-
-    return 'servicio de peticiones peticiones.service.ts'
+    return 'servicio de peticiones peticiones.service.ts';
   }
   getArticulos(){
-    this._http.get(this.url);
+    return this._http.get(this.url);
   }
 }

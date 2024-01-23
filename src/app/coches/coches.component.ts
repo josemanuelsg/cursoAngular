@@ -11,7 +11,7 @@ import { PeticionesService } from '../services/peticiones.service';
 export class CochesComponent {
   public coche: Coche;
   public coches: Array<Coche>;
-  public articulos;
+  public articulos:any;
   constructor(private _peticionesService: PeticionesService) {
     this.coche = new Coche('', '', '');
     this.coches = [
@@ -22,17 +22,23 @@ export class CochesComponent {
       new Coche('Tesla model 3', '180', 'gris'),
     ];
   }
+
   ngOnInit() {
     this._peticionesService.getArticulos().subscribe(
       (result) => {
-        console.log(result);
+        this.articulos = result;
+        console.log(this.articulos);
+        if(!this.articulos){
+          console.log("Error en el servidor");
+        }
       },
       (error) => {
-        var errorMessage = <any>error;
-        console.log(errorMessage);
+        var errorMessasge = <any>error;
+        console.log(errorMessasge);
       }
     );
   }
+
   //Método cuando hacemos submit en el formulario:
   onSubmit() {
     console.log(this.coche);
