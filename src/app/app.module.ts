@@ -12,6 +12,9 @@ import { ConversorPipe } from './pipes/conversor.pipe';
 import { CochesComponent } from "./coches/coches.component";
 import { HttpClientModule } from '@angular/common/http';
 import { PlantillasComponent } from './plantillas/plantillas.component';
+import { TiempoComponent } from './tiempo/tiempo.component';
+import { MapaComponent } from './mapa/mapa.component';
+import { HijoComponent } from './hijo/hijo.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { PlantillasComponent } from './plantillas/plantillas.component';
     ContactoComponent,
     ConversorPipe,
     CochesComponent,
-    PlantillasComponent
+    PlantillasComponent,
+    TiempoComponent,
+    MapaComponent,
+    HijoComponent
   ],
   imports: [
     BrowserModule,

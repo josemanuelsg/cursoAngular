@@ -17,3 +17,6 @@ export class PeticionesService{
     return this._http.get(this.url);
   }
 }
+
+
+
