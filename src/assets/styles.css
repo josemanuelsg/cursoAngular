@@ -1,20 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-
-
-label{
-  padding: 20px;
-}
-
-.fondoAzul
-{
-  background-color:lightblue !important;
-}
-
-.fondoVerde{
-  background-color: lightgreen !important;
-}
-
-
 #content{
 	margin-top:30px;
 	border-radius: 2px;
@@ -40,27 +23,30 @@ label{
 }
 
 #nav{
-	padding: 5px;
+	padding: 0px;
+	margin: 0px;
 	background: rgba(224, 49, 55, 0.67);
 }
 
 #nav ul{
 	margin: 0px;
 	list-style: none;
+	padding-left: 20px;
 }
 
-/* #nav ul li{
+#nav ul li{
 	float:left;
-  padding: 90px;
-} */
+	margin-right: 20px;
+}
 
 #nav ul li a{
 	display: block;
 	color: white;
 	height: 30px;
 	line-height: 29px;
+	padding-left: 10px;
+	padding-right: 10px;
 	transition: all 300ms;
-  padding: 20px;
 }
 
 #nav ul li a:hover{
@@ -69,7 +55,6 @@ label{
 }
 
 .activado{
-  font-weight: bold;
 	text-decoration: none !important;
 	border-bottom:4px solid yellow !important;
 }
@@ -84,8 +69,7 @@ label{
 	margin-top:30px;
 	padding-top: 10px;
 	border-top:1px solid #eee;
-  background-color: lightgrey;
-	color: rgb(128, 128, 128);
+	color: gray;
 }
 
 #form-producto label{

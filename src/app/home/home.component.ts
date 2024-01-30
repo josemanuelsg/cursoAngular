@@ -1,43 +1,27 @@
 import
  {Component} from '@angular/core';
- import { RopaService } from '../services/ropa.service';
+
 
 
  // Decorador
  @Component({
   selector:'home',
-  templateUrl: './home.component.html',
-  providers:[RopaService]
+  templateUrl: './home.component.html'
  })
 
  export class HomeComponent{
-    public titulo = "Página principal";
-    public listado_ropa:Array<string>;
-    public prenda_a_guardar:string;
+    public titulo = "home.component";
     public fecha;
     public nombre = "jose Manuel";
 
-    constructor(
-      private _ropaService: RopaService
-    ){
+    constructor(){
       this.fecha = new Date(); // Sin argumentos fecha actual.
     }
 
     ngOnInit(){
-      this.listado_ropa = this._ropaService.getRopa();
-      console.log(this.listado_ropa);
+      console.log("Home arrancado");
 
     }
 
-    // Método para guardar una nueva prenda en el array:
-    guardarPrenda(){
-      this._ropaService.addRopa(this.prenda_a_guardar);
-      this.prenda_a_guardar = "";
-    }
-
-    eliminarPrenda(index:number){
-      this._ropaService.deleteRopa(index);
-      alert(index);
-    }
 
  }

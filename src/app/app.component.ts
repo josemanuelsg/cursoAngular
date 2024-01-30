@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'proyecto2';
+  public title:string = 'app.component.ts';
+  public header_color: string;
+
+  constructor(){
+    this.header_color = "lightgrey";
+  }
 }

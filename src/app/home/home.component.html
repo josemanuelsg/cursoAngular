@@ -1,17 +1,13 @@
-<h2>{{ titulo }}</h2>
+<h1>TITULO DE {{ titulo }}</h1>
+<H2>{{fecha|date:'dd/MM/yyyy'}}</H2>
+<h3>{{nombre | uppercase}} </h3> <!-- Mostrar texto en mayusuculas -->
+<hr>
 <br>
-<!-- {{fecha|date:'fullDate'}} // Mostrar toda la fecha
-{{fecha|date:'dd/MM/yyyy'}} // Mostrar fecha procesada
-{{nombre | uppercase}} // Mostrar el texto en mayusuculas
-{{nombre | lowercase }} //  Mostrar el texto en minusculas -->
-{{5|conversor:7}} // Utilizar el conversor personalizado
+<!-- {{fecha|date:'fullDate'}} // Mostrar toda la fecha -->
+
+<!-- {{nombre | uppercase}} // Mostrar el texto en mayusuculas
+{{nombre | lowercase }} //  Mostrar el texto en minusculas
+{{5|conversor:7}} // Utilizar el conversor personalizado -->
+
 <br>
-<input type="text" [(ngModel)]="prenda_a_guardar"><button (click)="guardarPrenda()">Añadir prenda</button>
-<p *ngIf="prenda_a_guardar">La prenda a guardar es : <strong>{{prenda_a_guardar}}</strong></p>
-<h3>Listado de prendas de ropa</h3>
-<ul>
-  <li *ngFor="let prenda of listado_ropa;let i = index">
-  {{i}}{{prenda}}
-  <button (click)="eliminarPrenda(i)">Eliminar</button>
-  </li>
-</ul>
+

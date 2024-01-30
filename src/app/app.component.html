@@ -1,13 +1,27 @@
-<h3>{{title}}</h3>
-<hr>
-<nav>
-  <a [routerLink]="['/home']" [routerLinkActive]="'activado'" >Home</a>
-  <a [routerLink]="['/fruta']" [routerLinkActive]="'activado'" >Fruta</a>
-  <a [routerLink]="['/empleado']" [routerLinkActive]="'activado'" >Empleado</a>
-  <a [routerLink]="['/coches']" [routerLinkActive]="'activado'" >Coches</a>
-  <a [routerLink]="['/plantillas']" [routerLinkActive]="'activado'" >ngTemplate</a>
-  <a [routerLink]="['/tiempo']" [routerLinkActive]="'activado'" >Tiempo</a>
-  <a [routerLink]="['/contacto']" [routerLinkActive]="'activado'" >Contacto</a>
-</nav>
-<router-outlet></router-outlet>
+<div id="content" class="col-lg-10 col-lg-offset-1">
+  <header id="header" class="col-lg-12" [style.background]="header_color">
+    <h1>
+      TITULO DE {{ title }}
+    </h1>
+  </header>
 
+  <nav id="nav" class="col-lg-12">
+    <a [routerLink]="['/home']" [routerLinkActive]="'activado'">Home</a>
+    <a [routerLink]="['/ropa']" [routerLinkActive]="'activado'">Ropa</a>
+    <a [routerLink]="['/fruta']" [routerLinkActive]="'activado'">Fruta</a>
+    <a [routerLink]="['/empleado']" [routerLinkActive]="'activado'">Empleado</a>
+    <a [routerLink]="['/coches']" [routerLinkActive]="'activado'">Coches</a>
+    <a [routerLink]="['/plantillas']" [routerLinkActive]="'activado'">ngTemplate</a>
+    <a [routerLink]="['/comunicacion']" [routerLinkActive]="'activado'">input/output</a>
+    <a [routerLink]="['/contacto']" [routerLinkActive]="'activado'">Contacto</a>
+  </nav>
+
+  <section id="main" class="col-lg-12">
+    <!-- ROUTER-OUTLET se utiliza para importar la ruta actual, sustituye por la correspondiente-->
+    <router-outlet></router-outlet>
+  </section>
+
+  <footer id="footer" class="col-lg-12">
+    <p>FOOTER - {{title}}</p>
+  </footer>
+</div>
