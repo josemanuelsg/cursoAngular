@@ -1,1 +1,7 @@
-<p>tiempo works!</p>
+<h2>{{titulo}}</h2>
+<ul *ngIf="tiempo">
+  <li *ngFor="let t of tiempo">
+    {{t.date}}{{t.temperatureC}}{{t.summary}}
+  </li>
+</ul>
+<span *ngIf="!tiempo">Cargando lista tiempo...</span>

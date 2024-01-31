@@ -1,51 +1,50 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'fruta', // Etiqueta con el nombre del selector
-  templateUrl: './fruta.component.html' // Plantilla enlazada a fichero html
+	selector: 'fruta',
+	templateUrl: './fruta.component.html'
 })
+export class FrutaComponent{
+	public nombre_componente = 'Componente de fruta';
+	public listado_frutas = 'Naranja, Manzana, Pera y Sandia';
 
-// class para exportar nuestra clase fruta
-export class FrutaComponent {
-  public nombre_componente = 'TITULO';
-  public nombre:string;
-  public edad:number;
-  public mayorDeEdad:boolean;
-  public trabajos:Array<any> = ['Carpintero',22,true];
-  comodin:any;
+	public nombre:string;
+	public edad:number;
+	public mayorDeEdad:boolean;
+	public trabajos:Array<any> = ['Carpintero', 44, 'Fontanero'];
+	comodin:any;
 
-  /* Primero se lanza el constructor */
-  constructor(){
-    this.nombre = 'Jose Manuel';
-    this.edad = 37;
-    this.mayorDeEdad = false;
-    this.comodin = "si";
+	constructor(){
+		this.nombre = 'Víctor Robles';
+		this.edad = 77;
+		this.mayorDeEdad = false;
+		this.comodin = "SI";
+	}
 
-  }
+	ngOnInit(){
+		this.cambiarNombre();
+		this.cambiarEdad(45);
+		console.log(this.nombre + " " + this.edad);
 
-  /*  Primer metodo que se ejecuta al iniciar un componente */
-  ngOnInit(){
-    this.cambiarNombre();
-    this.cambiarEdad(45);
+		// Variables y alcance
+		var uno = 8;
+		var dos = 15;
 
-    // Variables y alcance:
-    var uno = 8;
-    var dos = 15;
+		if(uno === 8){
+			let uno = 3;
+			var dos = 88;
 
-    if(uno === 8 ){
-      let uno = 3;
-      var dos = 88;
-      console.log("dentro del if: "+dos);
-    }
-    console.log("fuera del if: "+dos);
-  }
+			console.log("DENTRO DEL IF: "+uno+" "+dos);
+		}
 
-  // METODOS
-  cambiarNombre(){
-    this.nombre = 'Pedro'
-  }
-  cambiarEdad(edad:number){
-    this.edad = edad;
-  }
+		console.log("FUERA DEL IF: "+uno+" "+dos);
+	}
+
+	cambiarNombre(){
+		this.nombre = 'Juan Lopez';
+	}
+
+	cambiarEdad(edad:any){
+		this.edad = edad;
+	}
 }
-

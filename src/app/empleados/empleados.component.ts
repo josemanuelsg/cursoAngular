@@ -8,7 +8,7 @@ import {Empleado} from './empleado';
 })
 
 export class EmpleadosComponent {
-  public titulo = 'componente empleados';
+  public titulo = 'Titulo de empleados.component.ts';
   public empleado:Empleado;
   public trabajadores:Array<Empleado>;
   public trabajador_externo:boolean;

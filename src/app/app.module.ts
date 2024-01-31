@@ -18,6 +18,10 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { ConversorPipe } from './pipes/conversor.pipe';
 import { CochesComponent } from "./coches/coches.component";
 import { RopaComponent } from './ropa/ropa.component';
+import{ ArticulosService } from './services/articulos.service';
+import { ColoresComponent } from './colores/colores.component';
+import { ProductosComponent } from './productos/productos.component';
+
 
 
 @NgModule({
@@ -34,7 +38,9 @@ import { RopaComponent } from './ropa/ropa.component';
     MapaComponent,
     HijoComponent,
     ArticulosComponent,
-    RopaComponent
+    RopaComponent,
+    ColoresComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,18 +1,16 @@
 // Los nombres entre llaves indican que importas un modulo concreto, en este caso el modulo component
 import { Component } from '@angular/core';
 import { Coche } from './coche';
-import { PeticionesService } from '../services/peticiones.service';
 
 @Component({
   selector: 'coches',
-  templateUrl: './coches.component.html',
-  providers: [PeticionesService],
+  templateUrl: './coches.component.html'
 })
 export class CochesComponent {
   public coche: Coche;
   public coches: Array<Coche>;
-  public articulos:any;
-  constructor(private _peticionesService: PeticionesService) {
+
+  constructor() {
     this.coche = new Coche('', '', '');
     this.coches = [
       new Coche('Seat Panda', '80', 'rosa'),
@@ -24,19 +22,7 @@ export class CochesComponent {
   }
 
   ngOnInit() {
-    this._peticionesService.getArticulos().subscribe(
-      (result) => {
-        this.articulos = result;
-        console.log(this.articulos);
-        if(!this.articulos){
-          console.log("Error en el servidor");
-        }
-      },
-      (error) => {
-        var errorMessasge = <any>error;
-        console.log(errorMessasge);
-      }
-    );
+
   }
 
   //Método cuando hacemos submit en el formulario:

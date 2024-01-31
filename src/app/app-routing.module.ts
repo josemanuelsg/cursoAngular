@@ -9,11 +9,18 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { CochesComponent } from "./coches/coches.component";
 import { PlantillasComponent } from "./plantillas/plantillas.component";
 import { RopaComponent } from './ropa/ropa.component';
+import { ArticulosComponent } from './articulos/articulos.component';
+import { ColoresComponent } from './colores/colores.component';
+import { TiempoComponent } from './tiempo/tiempo.component';
+import { ProductosComponent } from './productos/productos.component';
 
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
+  {path:'articulos', component: ArticulosComponent},
+  {path:'productos', component: ProductosComponent},
   {path:'empleado', component: EmpleadosComponent},
+  {path:'colores', component: ColoresComponent},
   {path:'fruta', component: FrutaComponent},
   {path:'home', component:HomeComponent},
   {path:'contacto', component: ContactoComponent},
@@ -21,6 +28,7 @@ const routes: Routes = [
   {path:'coches', component: CochesComponent},
   {path:'plantillas', component: PlantillasComponent},
   {path:'ropa',component:RopaComponent},
+  {path:'tiempo',component:TiempoComponent},
   {path:'**', component: HomeComponent}
 ];
 

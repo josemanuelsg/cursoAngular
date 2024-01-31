@@ -2,53 +2,7 @@
 
 <h3 style="color:blue">{{titulo}}</h3>
 <hr>
-<h3>Selector de colores</h3>
-<button (click)="logColorSeleccionado()" >Mostrar LOG color sellecionado</button>
-<input type="text" [(ngModel)]="color_seleccionado"/>
-<pre
-[style.border] = "color_seleccionado == 'red' ? '5px solid black' : '1px solid green'"
-[ngClass]="{
-  fondoAzul:color_seleccionado == 'blue',
-  fondoVerde: color_seleccionado == 'green',
-  letraGrande: 1 == 1
-}"
->
-  <strong>Color elegido:</strong>
-  {{color_seleccionado}}
-</pre>
-<div [ngStyle]="{
-  'background': color_seleccionado,
-  'width': '200px',
-  'height': '200px',
-  'float': 'right',
-  'margin-right': '68%'
-}"></div>
-<div style=clear:both></div>
-<hr>
-<h3>Colores switch</h3>
-<ul [ngSwitch]="color">
-  <li *ngSwitchCase="'red'" [ngStyle]="{
-    'background':color,
-    'color':'yellow',
-    'padding': '10px'
-    }">
-    Es de color ROJO
-  </li>
-  <li *ngSwitchCase="'green'" [ngStyle]="{
-    'background':color,
-    'color':'yellow',
-    'padding': '10px'
-    }">
-    Es de color ROJO
-  </li>
-  <li *ngSwitchCase="'blue'" [ngStyle]="{
-    'background':color,
-    'color':'yellow',
-    'padding': '10px'
-    }">
-    Es de color ROJO
-  </li>
-</ul>
+
 
 <div *ngIf="trabajador_externo === true">
   <button (click)="cambiarExterno(false)">Mostrar empleado</button>
@@ -86,5 +40,7 @@
     </ul>
   </li>
 </ul>
+
+
 
 
